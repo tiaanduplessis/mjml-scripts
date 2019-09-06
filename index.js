@@ -11,8 +11,8 @@ const dien = require('dien')
 const args = require('get-them-args')()
 
 if (args.unknown.includes('build')) {
-  const input = path.join(__dirname, args.i || args.input)
-  const output = path.join(__dirname, args.o || args.o)
+  const input = path.join(process.cwd(), args.i || args.input)
+  const output = path.join(process.cwd(), args.o || args.o)
   const { fonts, keepComments, beautify, minify, validationLevel, filePath, mjmlConfigPath, extension = '.html' } = args
 
   const files = glob.sync(input)
@@ -32,8 +32,8 @@ if (args.unknown.includes('build')) {
 }
 
 if (args.unknown.includes('watch')) {
-  const input = path.join(__dirname, args.i || args.input)
-  const output = path.join(__dirname, args.o || args.o)
+  const input = path.join(process.cwd(), args.i || args.input)
+  const output = path.join(process.cwd(), args.o || args.o)
   const { fonts, keepComments, beautify, minify, validationLevel, filePath, mjmlConfigPath, extension = '.html', serve = false, port = 8989 } = args
 
   const watcher = chokidar.watch(input, { persistent: true })
