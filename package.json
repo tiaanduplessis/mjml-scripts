@@ -1,5 +1,6 @@
 {
   "name": "mjml-scripts",
+  "version": "1.0.0",
   "description": "CLI scripts for making work with MJML a little bit nicer",
   "main": "index.js",
   "bin": "index.js",
