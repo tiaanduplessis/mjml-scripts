@@ -11,7 +11,7 @@
     "index.js"
   ],
   "dependencies": {
-    "chokidar": "^3.0.2",
+    "chokidar": "^3.4.0",
     "dien": "^1.0.0",
     "fast-glob": "^3.0.4",
     "fs-extra": "^8.1.0",
