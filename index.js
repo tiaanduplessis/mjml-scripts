@@ -30,7 +30,7 @@ if (args.unknown.includes('build')) {
     console.log(`Writing file: ${outputFile}`)
     fse.outputFileSync(outputFile, html)
   })
-}outputFile
+}
 
 if (args.unknown.includes('watch')) {
   const input = path.join(process.cwd(), args.i || args.input)
