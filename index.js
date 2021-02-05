@@ -27,9 +27,10 @@ if (args.unknown.includes('build')) {
       errors.forEach(error => console.warn(error))
     }
 
+    console.log(`Writing file: ${outputFile}`)
     fse.outputFileSync(outputFile, html)
   })
-}
+}outputFile
 
 if (args.unknown.includes('watch')) {
   const input = path.join(process.cwd(), args.i || args.input)
@@ -47,7 +48,7 @@ if (args.unknown.includes('watch')) {
   })
 
   watcher.on('change', (file) => {
-    console.log('changed', file)
+    console.log(`Change detected in: ${file}`)
     if (path.extname(file) === '.mjml') {
       // TODO: Refactor out duplicate code
       const name = path.basename(file)
@@ -60,6 +61,7 @@ if (args.unknown.includes('watch')) {
       }
 
       fse.outputFileSync(outputFile, html)
+      console.log(`Updated: ${file}`)
     }
   })
 
